@@ -22,7 +22,7 @@ export default function Contact() {
     if (!form.name || !form.email || !form.message) return;
     setStatus('sending');
     try {
-      const res = await fetch('http://localhost:3001/contact', {
+      const res = await fetch('https://personal-web-lx4k.onrender.com/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
