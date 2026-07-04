@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -6,8 +7,10 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectDetailAgrica from './components/ProjectDetailAgrica';
+import ProjectDetailAdufood from './components/ProjectDetailAdufood';
 
-export default function App() {
+function Home() {
   return (
     <div className="bg-[#0a0a0a] min-h-screen">
       <Nav />
@@ -21,5 +24,17 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/agrica" element={<ProjectDetailAgrica />} />
+        <Route path="/project/adufood" element={<ProjectDetailAdufood />} />
+      </Routes>
+    </Router>
   );
 }

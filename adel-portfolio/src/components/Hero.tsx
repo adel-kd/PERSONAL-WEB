@@ -105,7 +105,7 @@ export default function Hero() {
         {/* Sub text */}
         <p className="text-[#666] text-base max-w-lg mb-10 leading-relaxed">
           Performance-driven engineer specializing in React.js, Node.js & Express —
-          crafting production-ready platforms from Welkite, Ethiopia.
+          crafting production-ready platforms from Ethiopia.
         </p>
 
         {/* CTAs */}
@@ -145,13 +145,21 @@ export default function Hero() {
           >
             GITHUB
           </a>
+              <a
+            href="https://www.linkedin.com/in/adel-kedir971/"
+            className="flex items-center gap-2 px-6 py-3 border border-[#333] text-[#888] text-sm font-mono tracking-wider hover:border-[#e85d04] hover:text-[#e85d04] transition-all duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LINKEDIN
+          </a>
         </div>
 
         {/* Stats row */}
         <div className="mt-20 grid grid-cols-3 gap-8 max-w-sm">
           {[
-            { num: '15+', label: 'Projects Shipped' },
-            { num: '2+', label: 'Years Building' },
+            { num: '10+', label: 'Projects ' },
+            { num: '1+', label: 'Years Building' },
             { num: '3', label: 'Active Roles' },
           ].map((s) => (
             <div key={s.label}>

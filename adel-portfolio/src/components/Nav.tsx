@@ -51,7 +51,7 @@ export default function Nav() {
           onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
           className="font-mono text-sm font-bold tracking-widest text-white hover:text-[#e85d04] transition-colors"
         >
-          ADEL_DEV
+          ADEL_KEDIR
         </a>
 
         {/* Desktop Nav */}

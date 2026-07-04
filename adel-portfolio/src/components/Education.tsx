@@ -29,8 +29,8 @@ const education = [
 
 const awards = [
   {
-    title: 'Devpost Achievement',
-    desc: 'X Hackathons — Level 1, Generalist',
+    title: 'Devpost & Github Achievement ',
+    desc: 'X Hackathons — Level 1, Generalist, YOLO , Pull Shark',
     icon: Trophy,
   },
   {

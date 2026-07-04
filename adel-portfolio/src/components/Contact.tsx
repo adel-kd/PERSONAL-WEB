@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Send, Loader2, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Send, Loader2, CheckCircle, Linkedin } from 'lucide-react';
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'adelkedir971@gmail.com', href: 'mailto:adelkedir971@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+251 921 806 620', href: 'tel:+251921806620' },
-  { icon: MapPin, label: 'Location', value: 'Welkite, Ethiopia', href: null },
+  { icon: MapPin, label: 'Location', value: 'Addis Ababa, Ethiopia', href: null },
   { icon: Github, label: 'GitHub', value: 'github.com/adel-kd', href: 'https://github.com/adel-kd' },
+  { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/adel-kedir971', href: 'https://www.linkedin.com/in/adel-kedir971' },
 ];
 
 export default function Contact() {
@@ -21,7 +22,7 @@ export default function Contact() {
     if (!form.name || !form.email || !form.message) return;
     setStatus('sending');
     try {
-      const res = await fetch('https://portfolio-private-1.onrender.com/contact', {
+      const res = await fetch('http://localhost:3001/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
