@@ -1,26 +1,22 @@
-# Adel Kedir - Portfolio
+# Adel Kedir  
+ 
+ Currently learning **Machine learning** and improving my **React + Node.js** skills.  
+ Open to collaborate on **web applications, APIs, and open-source projects**.  
 
-A modern, responsive portfolio website showcasing full-stack web development projects with AI integration.
+---
 
-## Features
+###  About Me  
+- Skilled in **JavaScript, React, Node.js, Express, MongoDB, MySQL, RestAPIs**  
+- Exploring **DevOps, AI/ML** 
+- Based in **Ethiopia**  
 
-- Project showcase with detailed pages
-- Contact form with email integration
-- Responsive design with dark theme
-- Built with React, TypeScript, and Tailwind CSS
+---
 
+###  Let’s Connect  
+- GitHub: [@adel-kd](https://github.com/adel-kd)  
+- LinkedIn: https://www.linkedin.com/in/adel-kedir971  
+- Email: **adelkedir971@gmail.com**  
 
-## Tech Stack
+---
 
-- **Frontend**: React, TypeScript, Vite, Tailwind CSS
-- **Backend**: Node.js, Express, Nodemailer
-- **Styling**: Tailwind CSS with custom dark theme
-
-## Projects
-
-- **AGRICA**: AI-powered agricultural platform for African farmers
-- **AduFood**: Food delivery platform for Ethiopian market
-
-## Author
-
-Adel Kedir - Full-stack Developer
+⚡ *"Full stack full impact"*  
