@@ -41,7 +41,7 @@ export default function ProjectDetailAgrica() {
           </div>
           <div className="mt-4 flex items-center gap-4">
             <a
-              href="https://agricaethio.netlify.app/ai"
+              href="https://agricaethio.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white border border-white px-6 py-3 text-sm font-mono tracking-wider hover:bg-white hover:text-black transition-all"
