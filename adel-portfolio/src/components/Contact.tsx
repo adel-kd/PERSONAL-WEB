@@ -7,6 +7,8 @@ const contactInfo = [
   { icon: MapPin, label: 'Location', value: 'Addis Ababa, Ethiopia', href: null },
   { icon: Github, label: 'GitHub', value: 'github.com/adel-kd', href: 'https://github.com/adel-kd' },
   { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/adel-kedir971', href: 'https://www.linkedin.com/in/adel-kedir971' },
+   { icon: Send, label: 'Telegram', value: 'https://t.me/adu_dev', href: 'https://t.me/adu_dev' },
+
 ];
 
 export default function Contact() {
@@ -89,7 +91,7 @@ export default function Contact() {
               <span className="font-mono text-xs text-[#16a34a] tracking-widest">AVAILABLE_FOR_HIRE</span>
             </div>
             <p className="text-[#666] text-xs leading-relaxed">
-              Currently open to frontend internship extensions, freelance projects,
+              Currently open to freelance projects,
               and full-time MERN stack positions.
             </p>
           </div>

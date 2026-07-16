@@ -71,8 +71,7 @@ export default function Stack() {
               {[
                 { label: 'Architecture', value: 'MVC, RESTful, Microservices' },
                 { label: 'Security', value: 'JWT, RBAC, bcrypt' },
-                { label: 'Database', value: 'MongoDB, MySQL, Mongoose' },
-                { label: 'Deployment', value: 'Vercel, Netlify, Docker' },
+                { label: 'Database', value: 'MongoDB, MySQL' },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 border-b border-[#111] pb-4">
                   <span className="font-mono text-[10px] text-[#e85d04] w-24 shrink-0 tracking-widest uppercase">

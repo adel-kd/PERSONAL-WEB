@@ -2,23 +2,21 @@ import { Briefcase, Users, Star } from 'lucide-react';
 
 const experience = [
   {
-    title: 'Frontend Developer Intern',
-    company: 'Infnova Technologies',
+    title: 'Full-stack Developer',
+    company: 'Digital Unity- Student Dev hub',
     period: 'Mar 2026 — Present',
-    type: 'Internship',
     icon: Briefcase,
     color: '#e85d04',
     points: [
-      'Architecting responsive, high-performance UI components using React.js and Tailwind CSS.',
-      'Optimized frontend scalability via modular design patterns, reducing redundant code by 20%.',
-      'Collaborating with cross-functional teams to translate UI/UX wireframes into enterprise-grade code.',
+      'Pioneered a decentralized collective-investment blockchain application, enabling students and low-income individuals to securely pool resources and fractionally purchase stocks with complete member anonymity.',
+      'Collaborating with cross-functional teams to translate complex logic and wireframes into enterprise-grade code.',
     ],
   },
   {
     title: 'Director of Tech & Innovation',
     company: 'BORN TO WIN — WKU University Club',
     period: 'Jan 2026 — Present',
-    type: 'Leadership',
+    type: 'Volunteer',
     icon: Star,
     color: '#2563eb',
     points: [
@@ -28,7 +26,7 @@ const experience = [
   },
   {
     title: 'Vice President & Event Coordinator',
-    company: 'GMJ — Religious Club',
+    company: 'GMJ — Highschool Club',
     period: 'Previous Term',
     type: 'Volunteer',
     icon: Users,

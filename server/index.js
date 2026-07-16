@@ -9,10 +9,15 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
+// Check if required environment variables are set
+if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+  console.error('ERROR: Missing required environment variables (EMAIL_USER, EMAIL_PASS)');
+}
+
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 465,
-  secure: process.env.SMTP_PORT ? process.env.SMTP_PORT === '465' : true,
+  port: parseInt(process.env.SMTP_PORT || '587', 10),
+  secure: process.env.SMTP_PORT === '465', // true for 465, false for 587 (uses STARTTLS)
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -21,15 +26,25 @@ const transporter = nodemailer.createTransport({
 
 // verify transporter without exposing secrets
 transporter.verify((err) => {
-  if (err) console.warn('Mail transporter verify failed:', err.message);
-  else console.log('Mail transporter ready');
+  if (err) {
+    console.error('Mail transporter verify failed:', err.message);
+  } else {
+    console.log('Mail transporter ready');
+  }
 });
 
-app.get('/', (req, res) => res.send('OK'));
+app.get('/', (req, res) => {
+  console.log('Health check received');
+  res.send('OK');
+});
 
 app.post('/contact', async (req, res) => {
+  console.log('Contact form submission received:', { name: req.body.name, email: req.body.email });
   const { name, email, message } = req.body;
-  if (!name || !email || !message) return res.status(400).json({ error: 'Missing fields' });
+  if (!name || !email || !message) {
+    console.log('Missing fields validation failed');
+    return res.status(400).json({ error: 'Missing fields' });
+  }
 
   try {
     await transporter.sendMail({
@@ -41,6 +56,7 @@ app.post('/contact', async (req, res) => {
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p>${message.replace(/\n/g, '<br/>')}</p>`,
     });
 
+    console.log('Email sent successfully');
     return res.json({ ok: true });
   } catch (err) {
     console.error('Send mail error:', err && err.message ? err.message : err);
